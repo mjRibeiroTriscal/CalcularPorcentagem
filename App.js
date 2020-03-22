@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native'
-import ImcScreen from './screens/ImcScreen'
-import AdsBanner from './components/AdsBanner'
+import TestScreen from './screens/TestScreen'
+
+import {decode, encode} from 'base-64'
+
+if (!global.btoa) {
+    global.btoa = encode;
+}
+
+if (!global.atob) {
+    global.atob = decode;
+}
 
 export default class App extends Component {
 
 	render() {
 		return (
 			<View style={styles.container}>
-				<ImcScreen />
-				<AdsBanner />
+				<TestScreen nome='Mário' />
+				{/* <AdsBanner /> */}
 			</View>
 		)
 	}
@@ -18,8 +27,8 @@ export default class App extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		marginTop: 24,
 		backgroundColor: '#fff',
 		alignItems: 'center',
-		marginTop: 24,
 	},
 })
