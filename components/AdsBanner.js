@@ -2,6 +2,14 @@ import React from 'react'
 import {StyleSheet, View, Dimensions} from 'react-native'
 import { AdMobBanner } from 'expo-ads-admob'
 
+//      +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//      +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//        Lembrar de criar uma nova campanha e alterar o adUnitID para monetização
+//
+//      +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//      +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 export default class AdsBanner extends React.Component {
 
     render() {

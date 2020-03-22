@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, FlatList } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, FlatList, Switch } from 'react-native'
 import { db } from '../constants/Fire'
 
 // To disable yellow warning boxes
@@ -7,13 +7,14 @@ console.disableYellowBox = true;
 
 let docRef = db.collection('Usuarios')
 
-export default class Index extends Component {
+export default class TestScreen extends Component {
 
 	state = {
 		nome: '',
 		sobrenome: '',
 		funcao: '',
-		listFire: []
+		listFire: [],
+		value: true,
 	}
 
 	setAda = (nome, sobrenome, funcao) => {
@@ -132,6 +133,11 @@ export default class Index extends Component {
 						</View>
 					}
 				/>
+				<Switch
+					value={this.state.value}
+					onValueChange={ v => this.setState({ value: v }) }
+				/>
+				<Text>{this.state.value ? 'value true' : 'value false'}</Text>
 			</View>
 		)
 	}
