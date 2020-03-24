@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, FlatList, Switch } from 'react-native'
 import { db } from '../constants/Fire'
+import * as Font from 'expo-font'
 
 // To disable yellow warning boxes
 console.disableYellowBox = true;
@@ -8,6 +9,27 @@ console.disableYellowBox = true;
 let docRef = db.collection('Usuarios')
 
 export default class TestScreen extends Component {
+
+	// state = {
+	//     ...initialState,
+	//     fontLoaded: false,
+	// }
+
+	// async componentDidMount() {
+	//     await Font.loadAsync({
+	//         'AmaticSC-Bold': require('../assets/fonts/AmaticSC-Bold.ttf'),
+	//         'AmaticSC-Regular': require('../assets/fonts/AmaticSC-Regular.ttf'),
+	//         'Bangers-Regular': require('../assets/fonts/Bangers-Regular.ttf'),
+	//         'CarterOne-Regular': require('../assets/fonts/CarterOne-Regular.ttf'),
+	//         'Cinzel-Black': require('../assets/fonts/Cinzel-Black.ttf'),
+	//         'Cinzel-Bold': require('../assets/fonts/Cinzel-Bold.ttf'),
+	//         'Cinzel-Regular': require('../assets/fonts/Cinzel-Regular.ttf'),
+	//         'PermanentMarker-Regular': require('../assets/fonts/PermanentMarker-Regular.ttf'),
+	//         'SpecialElite-Regular': require('../assets/fonts/SpecialElite-Regular.ttf')
+	//     })
+
+	//     this.setState({ fontLoaded: true })
+	// }
 
 	state = {
 		nome: '',
@@ -50,6 +72,14 @@ export default class TestScreen extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
+				{/* <View style={styles.container}>
+					{
+						this.state.fontLoaded ?
+							<Text style={[styles.text, { fontSize: this.props.size }]}>{this.props.title}</Text> :
+							<ActivityIndicator size='large' color='purple' />
+					}
+					<Feather style={styles.icon} name={this.props.iconName} size={70} />
+				</View> */}
 				<Text>Nome: {this.state.nome}</Text>
 				<Text>Sobrenome: {this.state.sobrenome}</Text>
 				<Text>Função: {this.state.funcao}</Text>
@@ -135,7 +165,7 @@ export default class TestScreen extends Component {
 				/>
 				<Switch
 					value={this.state.value}
-					onValueChange={ v => this.setState({ value: v }) }
+					onValueChange={v => this.setState({ value: v })}
 				/>
 				<Text>{this.state.value ? 'value true' : 'value false'}</Text>
 			</View>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native'
 import Top from '../components/Top'
 import Tip from '../components/Tip'
-// import AdsBanner from '../components/AdsBanner'
+import AdsBanner from '../components/AdsBanner'
 
 export default class TipScreen extends Component {
 
@@ -11,7 +11,7 @@ export default class TipScreen extends Component {
 			<View style={styles.container}>
                 <Top title='Gorjeta' size={80} iconName='percent' />
                 <Tip />
-				{/* <AdsBanner /> */}
+				<AdsBanner />
 			</View>
 		)
 	}

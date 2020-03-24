@@ -6,6 +6,9 @@ import {decode, encode} from 'base-64'
 !global.btoa ? global.btoa = encode : 0
 !global.atob ? global.atob = decode : 0
 
+// To disable yellow warning boxes
+console.disableYellowBox = true;
+
 export default class App extends Component {
 	render() {
 		return (
