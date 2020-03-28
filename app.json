@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Tab Navigation Template",
-    "slug": "quizzing",
+    "name": "Calcular Porcentagem",
+    "slug": "calcularporcentagem",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -25,7 +25,13 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.targetcode.calcularporcentagem",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.targetcode.calcularporcentagem",
+      "versionCode": 1
     },
     "isDetached": true,
     "detach": {}
