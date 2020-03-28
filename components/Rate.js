@@ -10,25 +10,25 @@ export default class Rate extends Component {
                 <TouchableOpacity
                     style={styles.buttonAval}
                     onPress={this.props.bad}>
-                    <Entypo style={[styles.icon, {color: this.props.badSelected}]} name='emoji-sad' size={this.props.size} />
+                    <Entypo style={[styles.icon, {color: this.props.badSelected ? this.props.badSelected : '#BBBBBB'}]} name='emoji-sad' size={this.props.size} />
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.buttonAval}
                     onPress={this.props.normal}>
-                    <Entypo style={[styles.icon, {color: this.props.normalSelected}]} name='emoji-neutral' size={this.props.size} />
+                    <Entypo style={[styles.icon, {color: this.props.normalSelected ? this.props.normalSelected : '#BBBBBB'}]} name='emoji-neutral' size={this.props.size} />
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.buttonAval}
                     onPress={this.testeFun, this.props.good}>
-                    <Entypo style={[styles.icon, {color: this.props.goodSelected}]} name='emoji-happy' size={this.props.size} />
+                    <Entypo style={[styles.icon, {color: this.props.goodSelected ? this.props.goodSelected : '#BBBBBB'}]} name='emoji-happy' size={this.props.size} />
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.buttonAval}
                     onPress={this.props.great}>
-                    <Entypo style={[styles.icon, {color: this.props.greatSelected}]} name='emoji-flirt' size={this.props.size} />
+                    <Entypo style={[styles.icon, {color: this.props.greatSelected ? this.props.greatSelected : '#BBBBBB'}]} name='emoji-flirt' size={this.props.size} />
                 </TouchableOpacity>
 
             </View>
