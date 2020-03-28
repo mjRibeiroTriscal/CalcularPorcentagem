@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent'
     },
     icon: {
-        color: '#888888'
+        color: '#BBBBBB'
     },
 })
